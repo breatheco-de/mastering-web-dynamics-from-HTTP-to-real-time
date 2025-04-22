@@ -1,7 +1,9 @@
 ---
 title: "How the Web Works – Introduction to HTTP"
-description: >- 
-Discover the fundamental role of HTTP in web communication. Learn how browsers and servers exchange information through requests and responses, and why HTTP transports data without interpreting it. Understand how the browser transforms that data into visual experiences.
+description: > 
+    Discover the fundamental role of HTTP in web communication. Learn how browsers and servers exchange information through 
+    requests and responses, and why HTTP transports data without interpreting it. Understand how the browser transforms that 
+    data into visual experiences.
 tags: ["HTTP", "HTML", "Web Browsers", "Networks", "Developer Tools"]
 ---
 
