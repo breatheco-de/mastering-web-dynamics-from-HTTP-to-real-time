@@ -1,6 +1,6 @@
 ---
 title: "Cómo funciona la web – Introducción a HTTP"
-description: >- 
+description: > 
 Descubre el rol fundamental de HTTP en la comunicación web. Aprendé cómo los navegadores y servidores intercambian información a través de solicitudes y respuestas, y por qué HTTP transporta datos sin interpretarlos. Comprendé cómo el navegador transforma esos datos en experiencias visuales.
 tags: ["HTTP","HTML","Navegadores web","Redes","Herramientas de desarrollador"]
 ---
