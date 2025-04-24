@@ -5,6 +5,8 @@ description: >
 tags: ["HTML", "DOM", "browser", "web structure", "web", "rendering"]
 ---
 
+<todo> Falta la introduccion diciendo que asumimos que ya se sabe como funciona el backend y como recive y prepara la respuesta del primer HTML que va a renderizarse, ahora vamos a hablar de lo que pasa una vez que el HTML llega al browser</todo>
+
 ## The Browser as an Architect
 
 Once the server sends **the response** with the page content (e.g., an HTML file), the browser begins its work, receiving that content and **parsing it line by line to build the visual structure of the page** you see on your screen.
@@ -67,6 +69,8 @@ sequenceDiagram
         Browser->>Browser: Receives HTML from the server
         Browser->>Browser: Parses the <head> (styles, scripts)
         Browser->>Browser: Parses the <body> (visual content)
-        Browser->>Browser: Builds the DOM
+        Browser->>Browser: Builds the first DOM version
+        Browser->>Browser: Queues the subsequent requests (styles, scripts)
+        Browser->>Browser: Updates the DOM
         Browser->>Screen: Displays the page to the user
 ```
