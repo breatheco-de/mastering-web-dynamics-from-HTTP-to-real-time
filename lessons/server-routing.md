@@ -41,3 +41,12 @@ sequenceDiagram
 ```
 
 Understanding routing is key to knowing how websites organize their content and how servers intelligently respond to each visit. It's like having a good customer service system, knowing which counter to direct each request to, or how to respond if something is unavailable.
+
+
+<todo> 
+
+- Dar un ejemplo y espeicifcar como una API es basicamente hacer routing de recursos, es cruzar funciones de codigo con rutas, apuntar a la lesosn que ya existe de API requests.
+- Hablar de REST y de como la principal razon por la que existe es para orderdenar/simplicar las rutas de una API, apuntar a lesson que ya existe de rest
+- Apache, que es el servidor mas usado del mundo, es el rey de las rutas, y lo digo porque basciamente lo que hace es mapear rutas con carpetas, dandole consistencia a los PATH que ya el sistema operativo tenia, pero exponiendo sus archivos a la internet
+
+</todo>
