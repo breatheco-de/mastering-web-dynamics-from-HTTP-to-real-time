@@ -70,7 +70,8 @@ sequenceDiagram
         Browser->>Browser: Parses the <head> (styles, scripts)
         Browser->>Browser: Parses the <body> (visual content)
         Browser->>Browser: Builds the first DOM version
+        Browser->>Screen: Displays the first page to the user
         Browser->>Browser: Queues the subsequent requests (styles, scripts)
         Browser->>Browser: Updates the DOM
-        Browser->>Screen: Displays the page to the user
+        Browser->>Screen: Re-displays the page to the user
 ```
