@@ -12,7 +12,7 @@ This course follows the complete journey of the HTTP protocol, from the first DN
 
 5. [**Prioritizing Resource Requests:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/prioritizing-resource-requests.md) Load CSS, JavaScript, images, and other resources based on their importance. Learn how the browser decides what to display first.
 
-6. [**Optimizing Page Load:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/optimizing-page-loading.es.md) Explore how the browser uses caching and other strategies to speed up loading and how this impacts development and testing.
+6. [**Optimizing Page Load:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/optimizing-page-loading.md) Explore how the browser uses caching and other strategies to speed up loading and how this impacts development and testing.
 
 7. **Dynamic Updates with JavaScript:** Use JavaScript to make new HTTP requests to APIs without reloading the page. Ideal for displaying new data smoothly.
 
