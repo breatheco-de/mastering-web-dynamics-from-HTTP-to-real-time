@@ -69,7 +69,7 @@ sequenceDiagram
         Browser->>Browser: Receives HTML from the server
         Browser->>Browser: Parses the <head> (styles, scripts)
         Browser->>Browser: Parses the <body> (visual content)
-        Browser->>Browser: Builds the first DOM version
+        Browser->>Browser: Builds the first DOM version (onload)
         Browser->>Screen: Displays the first page to the user
         Browser->>Browser: Queues the subsequent requests (styles, scripts)
         Browser->>Browser: Updates the DOM
