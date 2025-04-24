@@ -5,6 +5,10 @@ description: >
 tags: ["server", "HTTP response", "HTML", "headers", "status codes", "browser", "web"]
 ---
 
+<todo>
+Igual hay que dar una intro sobre que trata este peo, por ejemplo: The next 2 minutes well talk about the whole process that happens from the moment a server receives a request to the moment it answers. Most of the web development debugging process relies on this knowledge; wouldn't you say is important? We are assuming the request already happened, and that is our starting point.
+</todo>
+
 Once the browser has sent an HTTP request to a server, a crucial part of the web cycle begins: the moment when the server **processes** that request and **responds** with the appropriate content.
 
 This is not limited to simply returning a file. The server must interpret what is being requested, decide how to respond, and construct that response properly.
@@ -62,3 +66,11 @@ sequenceDiagram
 Once the content is ready and accompanied by headers and the status code, the server **packages everything and sends it back to the browser**.
 
 At that point, the server’s job is done. Now it’s up to the browser to interpret the response and display it on the screen.
+
+<todo> 
+
+    - Dar los ejemplos mas comunes de respuestas en interernet y en una API: 400, 404, 401 vs 403, 500, 301 vs 302, 429, 304 
+    - agregar una seccion sobre como reconocer con un status code que la cache te esta jodiendo    
+</todo>
+
+
