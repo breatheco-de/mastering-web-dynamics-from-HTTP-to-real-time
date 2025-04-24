@@ -5,6 +5,13 @@ description: >
 tags: ["browser", "web resources", "HTML", "loading", "priority", "web performance"]
 ---
 
+<todo>This lesson is not about parsing HTML or the visual part of rendering a website, here we want to focus on HTTP and loading resources becasue understanding this is amazing for debugging web. We are asumming you already know or read about what HTTP is, understands requests and the typical webste and its structure, actually the first time a website is rendered is already covere on another lesson</todo>
+
+<todo>
+ - Add a secion about "onload" and how it use used or how important it is to javascript
+- Async and defer comes first than onload
+</todo>
+
 Once the browser has finished parsing the HTML and building the DOM, its work is far from over. It now needs to **load all the additional resources** mentioned on the page to ensure it looks and functions correctly. These resources include: Stylesheets (CSS), images, JavaScript scripts, custom fonts, videos, or other multimedia files.
 
 The question is, does it load them all at the same time? What happens if there are too many? This is where **resource prioritization** comes into play.
@@ -61,3 +68,10 @@ flowchart TD
         F --> I
         D --> I
 ```
+
+<todo>
+ - Explain "above the fold" and 'below the fold" y como se relaciona con loading=lazy y como esto impacta al usuario
+ - Sugiere que se piquen los scripts y css para separar above y below the fold.
+</todo>
+
+<code> Add useful debugging cases were this information is important </code>
