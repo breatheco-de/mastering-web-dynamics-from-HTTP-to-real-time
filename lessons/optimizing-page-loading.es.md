@@ -59,3 +59,9 @@ flowchart TD
     D --> G[Renderizar la página]
     F --> G
 ```
+
+<todo> 
+- COmo detectar en el network tab si un ceruso esta cachado (304?)
+- El truco de limpiar un request cambiando el URL pero sin cambiar el path, por ejemplo, usando tokens como querystring params que no tienen impactor en la respuest pero si en el request, estas egañando al server.
+- Dar un par de ejemplos de problemas que pasan con cache al ser web devs y como resolverlos
+</todo>

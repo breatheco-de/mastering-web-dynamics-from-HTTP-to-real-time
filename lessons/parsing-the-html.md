@@ -75,3 +75,11 @@ sequenceDiagram
         Browser->>Browser: Updates the DOM
         Browser->>Screen: Re-displays the page to the user
 ```
+
+<todo> 
+
+- seccion que diga: How fast does the HTML is redered? asuming a static with now subquent requests is almost instant, but very big htmls can lag the rendering and this is not a DOM issue, is more like a visualizacion issue becasue the first DOM is quickly built.
+- hay que decir que el body tambien puede tener link y script y ademas el script se tiene poner al final y el css en head y porque
+- que pasa si pongo un script en el head? nada, bloquea la carga del resto de la pagina hasta estar listo
+- que pasa con las imagenes o videos pesados?
+</todo>
