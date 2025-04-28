@@ -5,7 +5,9 @@ description: >
 tags: ["server", "HTTP response", "HTML", "headers", "status codes", "browser", "web"]
 ---
 
-Before we proceed, let's take a moment to understand what this part of the process is about. Over the next few minutes, we will explore **everything that happens inside the server from the moment it receives a request until it sends a response back to the browser**. This journey is essential because **a significant part of web development and troubleshooting** depends on correctly understanding these steps.
+Before we proceed, let's take a moment to understand what this part of the process is about. Over the next few minutes, we will explore **everything that happens inside the server from the moment it receives a request until it sends a response back to the browser**. 
+
+> ⚠️ This journey is essential because **a significant part of web development and troubleshooting** depends on correctly understanding these steps.
 
 **We assume the request has already been sent** (e.g., the browser requested `/about`), and we start from there to discover how the server interprets that request, builds an appropriate response, and delivers it.
 
