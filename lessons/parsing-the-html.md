@@ -1,15 +1,17 @@
 ---
-title: "Parsing HTML: How the Browser Builds the Page You See"
+title: "Analyzing HTML: How the Browser Builds the Page You See"
 description: >
-    Discover how the browser interprets the HTML received from the server to construct the visual structure of a web page. This lesson explains how the DOM is formed, what blocks its parsing, and why this step is crucial in loading any site.
+    Discover how the browser interprets the HTML received from the server to construct the visual structure of a web page. This lesson explains how the DOM is formed, what blocks its parsing, and why this step is crucial in loading any website.
 tags: ["HTML", "DOM", "browser", "web structure", "web", "rendering"]
 ---
 
-<todo> Falta la introduccion diciendo que asumimos que ya se sabe como funciona el backend y como recive y prepara la respuesta del primer HTML que va a renderizarse, ahora vamos a hablar de lo que pasa una vez que el HTML llega al browser</todo>
+Before we begin, let’s set the context: [**we assume you already know how a server processes a request**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/response-to-the-client.md) and prepares the initial HTML response to be sent to the browser. Now we take the next step: **what happens once that HTML reaches the browser?**
+
+That’s what we’re going to uncover—how the browser interprets the document to build the page you see on your screen.
 
 ## The Browser as an Architect
 
-Once the server sends **the response** with the page content (e.g., an HTML file), the browser begins its work, receiving that content and **parsing it line by line to build the visual structure of the page** you see on your screen.
+Once the server sends **the response** with the page content (e.g., an HTML file), the browser begins its work, receiving that content and **parsing it line by line to construct the visual structure of the page** you’ll see on your screen.
 
 Imagine the browser as an architect receiving the blueprints of a house (the HTML). It reads the instructions from the beginning, interprets the key parts (structure, decoration, functions), and assembles each element in its place. If the blueprints have attachments like images, technical manuals, or permits (stylesheets or scripts), the architect needs to review them before proceeding.
 
@@ -41,7 +43,7 @@ The browser **builds this tree while parsing the HTML**, and then uses it to vis
 
 ### How Does It Parse?
 
-1. It starts with `<html>` and processes line by line.
+1. It starts with `<html>` and goes line by line.
 
 2. It first reads the `<head>`, where it usually finds:
 
@@ -58,28 +60,33 @@ Then it moves to the `<body>`, which contains what will be displayed on the scre
 Certain elements can stop or delay the process:
 
 - External stylesheets (`<link rel="stylesheet">`): The browser pauses parsing until they are downloaded because they affect the design.
-- Scripts without `defer` or `async` attributes: If it encounters a traditional `<script>`, it executes it before continuing, which can slow down overall parsing.
+- Scripts without `defer` or `async` attributes: If it encounters a traditional `<script>`, it executes it before continuing, which can halt overall parsing. If you add a `<script>` directly in the `<head>` without using `defer` or `async`, the browser stops parsing the entire document and waits to download and execute the script before continuing to read the HTML. This can slow down the visual loading of the page, especially if the script takes a long time to execute.
 
-> This is why optimizing the order in which resources are loaded is so important: to allow the browser to build the page as quickly as possible.
+> 💡 This is why optimizing the order in which resources are loaded is so important, so the browser can build the page as quickly as possible.
+
+### What About Large Images or Videos?
+
+Large files like high-resolution images or videos do not block HTML parsing or the initial DOM construction. However, they can delay the full visual load of the page (complete rendering). This means that even if the browser finishes parsing and building the DOM quickly, the user might experience an incomplete or "under construction" page if the images or videos haven’t loaded yet.
+
+One way to address this is by using compressed formats (.webp for images, .mp4 for videos) and loading large images lazily using `loading="lazy"` in `<img>` tags.
 
 ```mermaid
 sequenceDiagram
-        participant Browser
+                participant Browser
 
-        Browser->>Browser: Receives HTML from the server
-        Browser->>Browser: Parses the <head> (styles, scripts)
-        Browser->>Browser: Parses the <body> (visual content)
-        Browser->>Browser: Builds the first DOM version (onload)
-        Browser->>Screen: Displays the first page to the user
-        Browser->>Browser: Queues the subsequent requests (styles, scripts)
-        Browser->>Browser: Updates the DOM
-        Browser->>Screen: Re-displays the page to the user
+                Browser->>Browser: Receives HTML from the server
+                Browser->>Browser: Parses the <head> (styles, scripts)
+                Browser->>Browser: Parses the <body> (visual content)
+                Browser->>Browser: Builds the initial DOM (onload)
+                Browser->>Screen: Displays the first page to the user
+                Browser->>Browser: Queues subsequent requests (styles, scripts)
+                Browser->>Browser: Updates the DOM
+                Browser->>Screen: Re-renders the page for the user
 ```
 
-<todo> 
+Assuming we receive static HTML with no subsequent requests (like additional resource downloads), the basic DOM is built almost immediately. However, very large HTML files (with thousands of elements) can slow down rendering. This issue isn’t with the DOM itself but with the browser’s visual rendering capacity (painting pixels on the screen).
 
-- seccion que diga: How fast does the HTML is redered? asuming a static with now subquent requests is almost instant, but very big htmls can lag the rendering and this is not a DOM issue, is more like a visualizacion issue becasue the first DOM is quickly built.
-- hay que decir que el body tambien puede tener link y script y ademas el script se tiene poner al final y el css en head y porque
-- que pasa si pongo un script en el head? nada, bloquea la carga del resto de la pagina hasta estar listo
-- que pasa con las imagenes o videos pesados?
-</todo>
+In summary:
+
+- Small DOM ➔ instant render.
+- Large DOM ➔ fast parsing, but slow visualization.

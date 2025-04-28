@@ -14,8 +14,8 @@ This course follows the complete journey of the HTTP protocol, from the first DN
 
 6. [**Optimizing Page Load:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/optimizing-page-loading.md) Explore how the browser uses caching and other strategies to speed up loading and how this impacts development and testing.
 
-7. **Dynamic Updates with JavaScript:** Use JavaScript to make new HTTP requests to APIs without reloading the page. Ideal for displaying new data smoothly.
+7. [**Dynamic Updates with JavaScript:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/dynamic-updates-with-javascript.md) Use JavaScript to make new HTTP requests to APIs without reloading the page. Ideal for displaying new data smoothly.
 
-8. **Debugging API Requests:** Learn to inspect and troubleshoot HTTP requests from the browser, understanding the most common methods and formats in RESTful APIs.
+8. [**Debugging API Requests:**]((https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/debugging-api-requests.md)) Learn to inspect and troubleshoot HTTP requests from the browser, understanding the most common methods and formats in RESTful APIs.
 
-9. **Real-Time Updates with WebSockets:** Establish a continuous connection with the server to receive instant data, such as in live chats or notifications.
+9. [**Real-Time Updates with WebSockets:**]((https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/real-time-updates-with-websockets.md)) Establish a continuous connection with the server to receive instant data, such as in live chats or notifications.
