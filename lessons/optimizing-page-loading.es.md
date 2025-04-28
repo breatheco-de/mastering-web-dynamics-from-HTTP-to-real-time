@@ -11,7 +11,7 @@ Hasta ahora vimos cómo el navegador carga una página solicitando recursos como
 La respuesta es clave para el rendimiento web: **el navegador intenta no volver a descargar lo mismo dos veces**. En su lugar, **usa memoria caché** para guardar archivos temporalmente y acelerar las siguientes visitas.
 
 
-### La caché es como una despensa en casa
+## La caché es como una despensa en casa
 
 Imagina que el navegador es como una persona que cocina todos los días. Cuando necesita preparar una comida, lo primero que hace es mirar en la despensa (la caché). Si ya tiene los ingredientes (archivos descargados antes), puede cocinar más rápido sin salir de casa. Pero si le falta algo, tiene que ir al supermercado (el servidor) a comprarlo, lo cual toma más tiempo.
 
@@ -60,8 +60,50 @@ flowchart TD
     F --> G
 ```
 
-<todo> 
-- COmo detectar en el network tab si un ceruso esta cachado (304?)
-- El truco de limpiar un request cambiando el URL pero sin cambiar el path, por ejemplo, usando tokens como querystring params que no tienen impactor en la respuest pero si en el request, estas egañando al server.
-- Dar un par de ejemplos de problemas que pasan con cache al ser web devs y como resolverlos
-</todo>
+## Cómo detectar si un recurso fue servido desde caché
+
+Cuando usás las herramientas de desarrollo del navegador (DevTools), podés inspeccionar las solicitudes en la pestaña **Network**. Algunos indicadores de que un recurso fue servido desde caché son:
+
+- **Código de estado 304 Not Modified:** Esto significa que el navegador preguntó al servidor si el recurso había cambiado, y el servidor respondió que no, así que el navegador usó su copia local.
+
+- **Indicadores como "from disk cache" o "from memory cache" en la columna Size o en los detalles de la solicitud:** Esto indica que el navegador **ni siquiera consultó al servidor** porque ya tenía una copia válida en memoria o en disco.
+
+> **Nota:** En las DevTools de Chrome, podés agregar columnas como **"Transferred"** y **"Size"** para ver si un recurso se descargó realmente o vino desde caché.
+
+
+## El truco de limpiar un recurso usando query strings
+
+A veces queremos forzar que el navegador trate un recurso como **nuevo**, aunque la ruta del archivo no haya cambiado. Una estrategia común es **agregar un parámetro extra** en la URL que no afecta el contenido. Por ejemplo:
+
+```html
+<link rel="stylesheet" href="styles.css?v=2">
+<script src="app.js?version=20240427"></script>
+```
+
+Aquí, aunque el servidor esté sirviendo el mismo archivo `styles.css` o `app.js`, el navegador ve una URL diferente (`styles.css?v=2`) y hace una nueva solicitud como si fuera otro recurso.
+
+Esto es útil para:
+
+- Asegurar que los usuarios descarguen la última versión de un archivo actualizado.
+- Evitar problemas de caché agresiva en navegadores o proxies intermedios.
+
+> **Importante:** Estos parámetros deben ser controlados estratégicamente: podés automatizarlos en el proceso de despliegue (build) para agregar un número de versión o hash cuando un archivo cambia.
+
+
+### Ejemplos reales de problemas de caché y cómo solucionarlos
+
+Aquí algunos casos típicos que enfrentan los desarrolladores web:
+
+- **Cambio en el CSS o en un archivo JS pero los usuarios ven la versión vieja:** Solución: usar un query string de versión (`?v=2`) o cambiar el nombre del archivo (`styles_v2.css`).
+
+- **Bug reportado donde "a mí se me ve roto pero a otro no":** Puede ser que uno esté viendo la versión vieja en caché.  
+  Solución: forzar recarga sin caché (`Ctrl + F5`) o limpiar caché manualmente.
+
+- **Analytics o scripts de terceros no se actualizan aunque cambiamos la integración:**  
+  Solución: agregar control de versiones en las URLs de esos scripts.
+
+- **Cambiaste una imagen, pero los usuarios siguen viendo la anterior:**  
+  Solución: cambiar el nombre de la imagen (`logo_v2.png`) o agregar un query string (`logo.png?updated=1`).
+
+- **Cambios menores en HTML no se reflejan en sitios con service workers (PWA):**  
+  Solución: invalidar cachés en el service worker y asegurarse de gestionar la actualización correctamente.

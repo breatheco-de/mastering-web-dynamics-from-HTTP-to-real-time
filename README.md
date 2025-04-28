@@ -16,6 +16,6 @@ This course follows the complete journey of the HTTP protocol, from the first DN
 
 7. [**Dynamic Updates with JavaScript:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/dynamic-updates-with-javascript.md) Use JavaScript to make new HTTP requests to APIs without reloading the page. Ideal for displaying new data smoothly.
 
-8. [**Debugging API Requests:**]((https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/debugging-api-requests.md)) Learn to inspect and troubleshoot HTTP requests from the browser, understanding the most common methods and formats in RESTful APIs.
+8. [**Debugging API Requests:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/debugging-api-requests.md) Learn to inspect and troubleshoot HTTP requests from the browser, understanding the most common methods and formats in RESTful APIs.
 
-9. [**Real-Time Updates with WebSockets:**]((https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/real-time-updates-with-websockets.md)) Establish a continuous connection with the server to receive instant data, such as in live chats or notifications.
+9. [**Real-Time Updates with WebSockets:**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/real-time-updates-with-websockets.md) Establish a continuous connection with the server to receive instant data, such as in live chats or notifications.
