@@ -5,7 +5,7 @@ description: >
 tags: ["navegador", "recursos web", "HTML", "carga", "prioridad", "rendimiento web"]
 ---
 
-Esta lección no trata sobre [analizar HTML](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/parsing-the-html.es.md) ni sobre el renderizado visual de un sitio web. Aquí queremos enfocarnos específicamente en **cómo el navegador gestiona las solicitudes HTTP de recursos externos** (como hojas de estilo, imágenes o scripts) después de construir el DOM. Comprender este proceso es **clave para diagnosticar y optimizar la carga de un sitio web**, especialmente cuando surgen problemas de rendimiento.
+Esta lección no trata sobre [analizar HTML](#parsing-the-html.es.md) ni sobre el renderizado visual de un sitio web. Aquí queremos enfocarnos específicamente en **cómo el navegador gestiona las solicitudes HTTP de recursos externos** (como hojas de estilo, imágenes o scripts) después de construir el DOM. Comprender este proceso es **clave para diagnosticar y optimizar la carga de un sitio web**, especialmente cuando surgen problemas de rendimiento.
 
 **Asumimos que ya sabes**:
 - Qué es HTTP y cómo funcionan las solicitudes y respuestas básicas.
