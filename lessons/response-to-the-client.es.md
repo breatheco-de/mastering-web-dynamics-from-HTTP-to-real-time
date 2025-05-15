@@ -79,13 +79,13 @@ sequenceDiagram
 
 ### Detectando problemas de caché con el código de estado
 
-A veces, un problema que parece del servidor o del navegador es culpa de la [caché](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/optimizing-page-loading.es.md). Cuando un servidor responde con `304 Not Modified`, le está diciendo al navegador: "No te mando el contenido de nuevo porque ya lo tienes guardado."Esto es eficiente, pero puede causar problemas si:
+A veces, un problema que parece del servidor o del navegador es culpa de la [caché](#optimizing-page-loading). Cuando un servidor responde con `304 Not Modified`, le está diciendo al navegador: "No te mando el contenido de nuevo porque ya lo tienes guardado."Esto es eficiente, pero puede causar problemas si:
 
 - Actualizaste tu página y el navegador sigue mostrando la versión vieja.
 
 - Modificaste datos en una API pero la respuesta sigue igual.
 
-> ⚠️ Atención: Si ves muchos 304 cuando esperas cambios, probablemente la [caché](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/optimizing-page-loading.es.md) esté interfiriendo.
+> ⚠️ Atención: Si ves muchos 304 cuando esperas cambios, probablemente la [caché](#optimizing-page-loading) esté interfiriendo.
 
 #### ¿Cómo solucionarlo?
 
