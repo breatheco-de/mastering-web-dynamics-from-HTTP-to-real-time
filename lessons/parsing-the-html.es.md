@@ -5,7 +5,7 @@ description: >
 tags: ["HTML", "DOM", "navegador", "estructura web", "web", "renderizado"]
 ---
 
-Antes de empezar, pongámonos en contexto, [**asumimos que ya sabes cómo un servidor procesa una solicitud**](@response-to-the-client.es.md) y prepara la primera respuesta HTML que se enviará al navegador. Ahora damos el siguiente paso: **¿qué sucede una vez que ese HTML llega al navegador?**  
+Antes de empezar, pongámonos en contexto, [**asumimos que ya sabes cómo un servidor procesa una solicitud**](#response-to-the-client.es.md) y prepara la primera respuesta HTML que se enviará al navegador. Ahora damos el siguiente paso: **¿qué sucede una vez que ese HTML llega al navegador?**  
 
 Eso es lo que vamos a descubrir, cómo el navegador interpreta el documento para construir la página que ves en tu pantalla.
 
