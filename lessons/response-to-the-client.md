@@ -82,13 +82,13 @@ sequenceDiagram
 
 ### Detecting Cache Issues with the Status Code
 
-Sometimes, an issue that seems to be with the server or browser is actually caused by [cache](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/optimizing-page-loading.md). When a server responds with `304 Not Modified`, it's telling the browser: "I'm not sending the content again because you already have it cached." This is efficient but can cause problems if:
+Sometimes, an issue that seems to be with the server or browser is actually caused by [cache](#optimizing-page-loading). When a server responds with `304 Not Modified`, it's telling the browser: "I'm not sending the content again because you already have it cached." This is efficient but can cause problems if:
 
 - You've updated your page, but the browser still shows the old version.
 
 - You've modified data in an API, but the response remains the same.
 
-> ⚠️ Attention: If you see many 304 responses when expecting changes, the [cache](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/optimizing-page-loading.md) might be interfering.
+> ⚠️ Attention: If you see many 304 responses when expecting changes, the [cache](#optimizing-page-loading) might be interfering.
 
 #### How to Fix It?
 
