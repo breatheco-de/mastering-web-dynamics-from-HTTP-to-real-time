@@ -7,7 +7,7 @@ tags: ["routing", "web server", "URL", "HTTP", "resources", "web"]
 
 Before sending a request to a server and receiving a response, it's important to understand how internet connections work. Typically, servers exist to respond to requests from clients. For example, someone somewhere in the world tries to access a website like `www.example.com`. However, servers don't understand names like `example.com` directly; they only understand numerical IP addresses.
 
-That's why browsers first use a system called [**DNS**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/resolving-dns.md) to find the IP corresponding to the domain name. Once they obtain the correct IP address, only then can they **send the request to the appropriate server**.
+That's why browsers first use a system called [**DNS**](#) to find the IP corresponding to the domain name. Once they obtain the correct IP address, only then can they **send the request to the appropriate server**.
 
 ## Which Door Do We Knock On?
 
