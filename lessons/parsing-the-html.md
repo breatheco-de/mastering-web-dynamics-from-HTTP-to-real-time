@@ -5,7 +5,7 @@ description: >
 tags: ["HTML", "DOM", "browser", "web structure", "web", "rendering"]
 ---
 
-Before we begin, let’s set the context: [**we assume you already know how a server processes a request**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/response-to-the-client.md) and prepares the initial HTML response to be sent to the browser. Now we take the next step: **what happens once that HTML reaches the browser?**
+Before we begin, let’s set the context: [**we assume you already know how a server processes a request**](#response-to-the-client.md) and prepares the initial HTML response to be sent to the browser. Now we take the next step: **what happens once that HTML reaches the browser?**
 
 That’s what we’re going to uncover—how the browser interprets the document to build the page you see on your screen.
 
