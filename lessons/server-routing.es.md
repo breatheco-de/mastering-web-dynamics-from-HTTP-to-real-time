@@ -7,7 +7,7 @@ tags: ["enrutamiento", "servidor web", "URL", "HTTP", "recursos", "web"]
 
 Antes de poder enviar una solicitud a un servidor y recibir una respuesta, es importante entender cómo funcionan las conexiones en Internet. Normalmente, los servidores existen para responder a las solicitudes de otros clientes. Por ejemplo, alguien que en alguna parte del mundo intenta acceder a un sitio web como `www.ejemplo.com`. Sin embargo, los servidores no entienden nombres como `ejemplo.com` directamente solo entienden direcciones IP numéricas. 
 
-Por eso, los navegadores primero utilizan un sistema llamado [**DNS**](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/resolving-dns.es.md) para encontrar la IP correspondiente al nombre de dominio. Una vez que obtienen la dirección IP correcta, recién entonces pueden **enviar la solicitud al servidor adecuado**.
+Por eso, los navegadores primero utilizan un sistema llamado [**DNS**](#todo) para encontrar la IP correspondiente al nombre de dominio. Una vez que obtienen la dirección IP correcta, recién entonces pueden **enviar la solicitud al servidor adecuado**.
 
 
 ## ¿A qué puerta vamos?
