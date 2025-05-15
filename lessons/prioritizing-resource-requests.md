@@ -5,7 +5,7 @@ description: >
 tags: ["browser", "web resources", "HTML", "loading", "priority", "web performance"]
 ---
 
-This lesson is not about [parsing HTML](https://github.com/4GeeksAcademy/mastering-web-dynamics-from-HTTP-to-real-time/blob/main/lessons/parsing-the-html.md) or the visual rendering of a website. Here, we focus specifically on **how the browser manages HTTP requests for external resources** (like stylesheets, images, or scripts) after building the DOM. Understanding this process is **key to diagnosing and optimizing website loading**, especially when performance issues arise.
+This lesson is not about [parsing HTML](#parsing-the-html.md) or the visual rendering of a website. Here, we focus specifically on **how the browser manages HTTP requests for external resources** (like stylesheets, images, or scripts) after building the DOM. Understanding this process is **key to diagnosing and optimizing website loading**, especially when performance issues arise.
 
 **We assume you already know**:
 - What HTTP is and how basic requests and responses work.
